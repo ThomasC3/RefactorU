@@ -1,0 +1,185 @@
+/* ADD YOUR STYLES HERE */
+
+/*    MODULARITY2     */
+
+/* HORIZONTALLY SPACED  */
+
+.horizontal-space1 {
+	text-align: center;
+	image224: center;
+}
+
+.horizontal-space1 img {
+	padding: 2%;
+}
+
+.horizontal-space2 > * {
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	padding: 3%;
+}
+
+.horizontal-space2 {
+	text-align: center;
+}
+
+/*   VERTICAL SPACED   */
+
+.vertical-space1 {
+	padding: 15% 0%;
+}
+
+.vertical-space2 {
+	padding: 15% 0%;
+}
+
+
+/*   HORIZONTAL LIST   */
+
+.horizontal-list {
+	list-style: none;
+	padding: 0;
+}
+
+.horizontal-list li {
+	float: left;
+}
+
+
+/*      BUTTONS       */
+
+.button1 {
+	color: white;
+	text-decoration: none;
+	font-size: 2em;
+	background-color: #ED828A;
+	display: inline-block;
+	padding: 4% 10%;
+	border-radius: 5px;
+}
+
+.button2 {
+	color: white;
+	text-decoration: none;
+	background-color: #ED828A;
+	display: inline-block;
+	padding: 2% 5%;
+	border-radius: 5px;
+}
+
+.button3 {
+	color: white;
+	text-decoration: none;
+	background-color: #ED828A;
+	display: inline-block;
+	padding: 1% 2%;
+	border-radius: 5px;
+}
+
+.button4 {
+	color: white;
+	text-decoration: none;
+	background-color: #ED828A;
+	display: inline-block;
+	padding: 2% 5%;
+	border-radius: 5px;
+}
+
+input[type="button"] {
+	color: white;
+	text-decoration: none;
+	background-color: #ED828A;
+	display: inline-block;
+	padding: 2% 7%;
+	border-radius: 5px;
+	border: none;
+}
+
+input[type="submit"] {
+	color: white;
+	text-decoration: none;
+	background-color: #ED828A;
+	display: inline-block;
+	padding: 2% 7%;
+	border-radius: 5px;
+	border: none;
+}
+
+
+
+/*  NAVIGATION MENU    */
+
+.nav-menu {
+	list-style: none;
+}
+
+.nav-menu li a {
+	color: white;
+	background-color: #ED828A;
+	text-decoration: none;
+	float: left;
+	padding: 1% 5%;
+}
+
+.nav-menu li:first-child a {
+	border-radius: 7px 0px 0px 7px;
+}
+
+.nav-menu li:last-child a {
+	border-radius: 0px 7px 7px 0px;
+}
+
+/*      PAGINATION     */
+
+.pagination {
+	list-style: none;
+}
+
+.pagination a {
+	float: left;
+	text-decoration: none;
+	color: #ED828A;
+	padding: 1% 1%;
+	border-bottom: 2px solid #ED828A;
+	margin: 0% 1%;
+}
+
+.pagination span {
+	float: left;
+	color: #CCCCD3;
+	padding: 1% 1%;
+	border-bottom: 2px solid #CCCCD3;
+	margin: 0% 1%;
+}
+
+.pagination .pagination-first {
+	border-bottom: none;
+}
+
+.pagination .pagination-last {
+	border-bottom: none;
+}
+
+
+/*    COMMENT STREAM    */
+
+.big-img {
+	float:left;
+	clear: left;
+	padding: 0% 2% 2% 0%;
+}
+
+.big-img-text {
+	overflow: hidden;
+}
+
+.comment {
+	clear: left;
+}
+
+.comment time {
+	font-size: small;
+	color: #BCBCC7;
+}
+
