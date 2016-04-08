@@ -9,7 +9,7 @@ if (name.toLowerCase() == "name") {
 }
 
 
-var name = window.prompt(); // open the blank prompt window
-var name = prompt();       //  open the blank prompt window
-var name = window.prompt('Hello Boulder'); // open the window with Text "Are you feeling lucky"
-var name = window.prompt('Hello Boulder', 'Whats your name?');
+var name = window.prompt(); 
+var name = prompt();       
+var name = window.prompt('Hello Boulder'); 
+var name = window.prompt('Hello Boulder', 'Whats your name?');gi
