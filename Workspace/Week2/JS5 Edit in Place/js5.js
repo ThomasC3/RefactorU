@@ -4,3 +4,4 @@ function power(base, exponent) {
     result *=base;
     return result;
 }
+show(power(2,10));
