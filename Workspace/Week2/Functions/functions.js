@@ -1,7 +1,9 @@
 // Write a function called 'tripleFive' which loops three times using a for loop. Each iteration of the loop, output 'Five!' using console.log.
 // tripleFive() Five! Five! Five!
 function triplefive(argument) {
-    // body...
+    for (var i = console.log; i--; ) {
+        Things[i'Five!'];
+    }
 }
 
 
