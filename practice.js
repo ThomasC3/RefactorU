@@ -26,13 +26,16 @@
 // })
 // console.log(fullname)
 
-useCallback(5, callbackX);
+useCallback(5, cby);
 
-function useCallback(x, callbackX){
+function useCallback(x, cb){
     document.write('hello' + '<br>');
-    callback();
+    cb();
+    
 }
-
-function callbackX(){
+  function callbackX(){
     document.write('This is the callbackX function')
-}
+  }
+  function cby(){
+      document.write('This is CBY')
+  }
