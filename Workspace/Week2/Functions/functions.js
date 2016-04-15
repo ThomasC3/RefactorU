@@ -1,7 +1,7 @@
 // Write a function called 'tripleFive' which loops three times using a for loop. Each iteration of the loop, output 'Five!' using console.log.
 // tripleFive() Five! Five! Five!
 function triplefive(argument) {
-    for (var i = console.log; i--; ) {
+    for (var i = console.log; i(); ) {
         Things[i'Five!'];
     }
 }
@@ -20,7 +20,9 @@ function lastletter('') {
 // Write a function called 'square' which takes a single argument which is a number, and returns number * number.
 // square(3) should return 9
 // square(5) should return 25
-function square()
+function square(x, y) {
+    
+}
 
 
 
