@@ -1,0 +1,145 @@
+.names{
+	border-collapse: collapse;
+	font-size: 14px;
+}
+
+.names tr{
+	border-top: 1px solid gainsboro;
+}
+
+.names .firstrow{
+	border-top: 0;
+	padding: 8px;
+}
+
+.names .firstcolumn{
+	width: 45px;
+}
+
+.names td,th{
+	padding: 8px;
+	width: 150px;
+}
+
+.stats div{
+	text-align: center;
+	color: gainsboro;
+	font-size: 12px;
+	width: 65px;
+	padding-top: 0px;
+	padding-bottom: 10px;	
+	
+}
+
+td>.number{
+	font-size: 30px;
+	font-weight: bold;
+	color: black;
+	padding-top: 10px;
+	padding-bottom: 0px;
+}
+
+.stats{
+	border-bottom: 1px solid gainsboro;
+	border-top: 1px solid gainsboro;
+}
+
+.barchart{
+	table-collapse: collapse;
+}
+
+.barchart th{
+	font-weight: bold;
+	text-align: right;
+	padding: 3px;
+	padding-right: 6px;
+	font-size: 14px;
+	margin: 2px;
+}
+
+.barchart div{
+	background: #47A3FF;
+	padding: 4px;
+	border-radius: 0px 3px 3px 0px;
+	margin: 1px;
+}
+
+.barchart td{
+	width: 400px;
+	color: #ffffff;
+	text-align: left;
+	text-indent: 2px;
+	width: 400px;
+	font-size: 11px;
+	margin: 2px;
+}
+
+/*.outerlightbox{
+	position: fixed;
+    bottom: 0;
+    right: 0;
+	height: 100vh;
+	width: 100vw;
+	background: gray;
+	z-index: 10;
+	line-height: 100vh;
+	text-align: center;
+}
+.innerlightbox{
+	vertical-align: middle;
+	position: relative;
+	display: inline-block;
+	text-align: left;
+	margin: auto;
+	width: 500px;
+	height: 250px;
+	border-radius: 10px;
+	padding: 20px;
+	background: white;
+}
+.lightboxbutton{
+	background: #ffffff;
+	position: absolute;
+	bottom: 25px;
+	right: 25px;
+	border-radius: 10px;
+	padding: 10px 30px;
+	z-index: 10;
+	background: hotpink;
+	line-height: 25px;
+}
+.lightboxbutton>a{
+	padding: 20px;
+	color: white;
+	text-decoration: none;
+}
+.lightboxtext{
+	line-height: 18px;*/
+
+.mediablock {
+float: left;
+margin-right: 8px;
+}
+
+.mediablockexercise{
+	position: relative;
+}
+
+.list{
+	position: relative;
+	left: 55px;
+}
+
+
+.list p{
+	position:relative;
+	left: 40px;
+}
+
+.cupcaketext{
+	position: relative;
+	left: 60px;
+	clear: left;
+}
+
+/*USELESS TEXT*/
