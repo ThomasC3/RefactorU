@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <title>Calculator</title>
+</html>
+<body>
+
+<h5>Tipping Calculator</h5>
+<p>Bill amount: <input type="number" ng-model="billAmount" ng-init="billAmount = 0; tipAmount = 0"></p>
+<button class="btn btn-secondary" ng-click="tipAmount = billAmount * .10">
+  10%
+</button>
+<button class="btn btn-secondary" ng-click="tipAmount = billAmount * .15">
+  15%
+</button>
+<button class="btn btn-secondary" ng-click="tipAmount = billAmount * .20">
+  20%
+</button>
+
+<p>Bill: {{billAmount}}</p>
+<p>Tip: {{tipAmount}}</p>
+<p>Total: {{billAmount + tipAmount}}</p>
+</body>
