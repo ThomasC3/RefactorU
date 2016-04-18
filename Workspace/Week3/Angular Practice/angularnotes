@@ -1,0 +1,42 @@
+AngularJS
+    -strongly opinionated, front end, MVC framework
+    
+    Strongly oppinionated
+        -all in one framework
+        -Do almost everything the "Angular" way
+        -Doesnt play well with others (JQuery, other frameworks)
+        -Dont be dogmatic! Sometimes the best solution is outside of Angular
+        
+    Front-end
+        -While Angular has features to interact with the back-end, it lives all on the front end
+        
+    MVC- Model View Controller
+        -Model, raw data that drives your application
+        -View, visual representation of the model
+        -Controller, the glue that links the model and view together
+        
+        AVoiding manipulating the view DIRECTLY
+        We will change the MODEL and have ut update the view
+        
+        Native DOM events/JQuery use atyle of programming called imperative programming
+        Angular we use declaritive programming all about setting up systems with rules
+        
+    Framework
+        Just a bunch of code that someone else wrote to help make our lives easier
+        
+    ===ANGULAR COMPONENTS===
+    
+    Module
+        -containers for your application /code
+        -top level, almost all other components go inside of a module
+        -just a bucket for your code
+        
+    Controller
+        -What ties your JS and HTML together
+        -Are registered to a MODULE
+        
+    Directives
+        -Most often custom HTML attributes
+            (ng-show, ng model)
+        -Markers that Angular needs to do something for that element
+        
