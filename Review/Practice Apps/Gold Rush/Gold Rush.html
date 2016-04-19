@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="myApp">
+
 <head>
-  <meta charset="utf-8">
-  <title>Colorado TopoMap Gold Rush</title>
-  <link rel="stylesheet" type="text/css" href="goldrush.css">
-
+   <title>Colorado TopoMap Gold Rush</title>
+  <link rel="stylesheet" type="text/css" href="Goldrush.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.4/angular.js"></script>
 </head>
-<body ng-controller="mainController" background="topo-co.jpg">
-<div class="container">
-  
-  <p>Gold found here</p>
 
-	<div id="map"></div>
-	    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKzzTyLWi_UCyVHs9G1pIbPmz9s3LVCPQ&callback=initMap">
-    </script>
+    <body ng-controller="myctrl">
+
+    <div>
+    <img  ng-click= "doClick()" class="img1" src="https://github.com/RefactorU/exercise-starters/blob/master/client-js/gold-rush/topo-co.jpg?raw=true" alt='map'>
+    </div>
+    <div>
+      <img ng-style="marker" class="small" src="https://lh4.ggpht.com/Tr5sntMif9qOPrKV_UVl7K8A_V3xQDgA7Sw_qweLUFlg76d_vGFA7q1xIKZ6IcmeGqg=w300"></div>
 	
-	<script src="goldrush.js"></script>
-</div>
-</body>
+	  <script src="GoldRush.js"></script>
+
+  </body>
 </html>
