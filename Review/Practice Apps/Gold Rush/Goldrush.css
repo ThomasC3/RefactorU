@@ -1,23 +1,32 @@
-html {
-	font-size: 14px;
+.container {
+	position: relative;
 }
-.small{
-	display: none;
+img {
+ max-width:100%;
+ max-height:100%;
+}
+.marker {
+	background-color: red;
+	height: 10px;
+	width: 10px;
 	position: absolute;
-	width: 50px;
-	height: 50px
+	border-radius: 10px;
+	top:0;
+	left:0;
 }
-.img1{
-max-height: 100%;
-max-width: 100%;
+.popUp {
+	width: 20%;
+	height: 50%;
+	background-color: white;
+	position: absolute;
+
 }
+h3 {
+	text-align: center;
+}
+button {
+	border-radius: 3px;
+	background-color: green;
+	color: white;
 
-/*.markerClass {*/
-/*	position: absolute;*/
-/*	height: 4rem;*/
-/*	width: 4rem; */
-/*	border: dashed; 2px;*/
-/*	color: red;*/
-/*	text-align: center;*/
-
-/*}*/
+}
