@@ -13,7 +13,9 @@ angular.module('goldRush')
            var y=event.pageY;
          //var note =prompt(' Add note', '');
             // console.log(x,y);
-          
+           
+            
+            
                // $scope.submitNote = function () {
                   //pushing cords into marker arrays
                   $scope.marker.push({"x":event.pageX,"y":event.pageY})   
@@ -21,7 +23,9 @@ angular.module('goldRush')
                   
                   // $scope.notes=!$scope.notes
                
-            //removes mark
+            
+         
+         //removes mark
          $scope.removeMarker = function(index, event) {
       $scope.marker.splice(index, 1)
       }

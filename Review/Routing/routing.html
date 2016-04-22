@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myRouterApp">
+    <head>
+
+        <meta charset="utf-8">
+        <title>UI router</title>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+        <script type="text/javascript" src="controllers.js"></script>
+        <script type="text/javascript" src="routing.js"></script>
+
+    </head>
+
+    <body></body>
+        <h1>UI Router Example</h1>
+        <div ui-view></div>
+        <ul>
+            <li><a href="#/login">Login</a></li>
+            <li><a ui-sref="/login">Login</a></li>
+            <li><a ng-href="#/login">Login</a></li>
+
+    
+    </body>
+</html>

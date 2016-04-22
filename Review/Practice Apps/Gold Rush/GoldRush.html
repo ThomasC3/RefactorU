@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app='goldRush'>
+   <head>
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
+       <script type="text/javascript" src="GoldRush.js"></script>
+       <link rel="stylesheet" href="Goldrush.css" type="text/css" />
+   </head>
+       <body ng-controller="troller">
+     
+      <div ng-click = 'drop()' class = 'container'>
+         <div class = 'popUp'>
+            <h3>Please add note</h3>
+            <input ng-model='popUpTextArea'>
+            <button ng-click = 'submitNote'>Submit</button>
+      </div>
+             <img src="https://github.com/RefactorU/exercise-starters/blob/master/client-js/gold-rush/topo-co.jpg?raw=true"></img>
+         </div>
+      
+          <div ng-click = 'removeMarker($index, $event)'class="marker" ng-repeat="mark in marker" style="top:{{mark.y-6}}px;left:{{mark.x-6}}px;"></div>
+     
+      </body>
+</html>
+
+
+

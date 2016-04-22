@@ -1,0 +1,10 @@
+.table {
+	border-color: gray;
+	border-bottom-color: gray;
+	text-align: right;
+}
+
+.names {
+	text-align: justify;
+	border-radius: 15px;
+}
