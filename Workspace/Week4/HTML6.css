@@ -1,8 +1,0 @@
-.body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
-    margin-right: -15px;
-    margin-left: -15px;
-}
