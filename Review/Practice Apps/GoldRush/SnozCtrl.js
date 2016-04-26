@@ -22,7 +22,7 @@ function candyControl(wonkaFactory){
     console.log('wonkydoo : ', wonkaFactory)
     candyCtrl.candies = wonkaFactory.candies
     
-    $timeout(function)
+    $timeout (function);
 }
 function wonkaFactory (){
     

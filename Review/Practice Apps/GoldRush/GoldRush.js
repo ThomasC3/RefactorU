@@ -10,15 +10,15 @@ var mainController = function($scope){
         $scope.clickSpot = {
             x : event.pageX / document.body.clientWidth * 100,
             y : event.pageY / document.body.clientHeight * 100
-        }
+    }
         $scope.markers.push($scope.clickSpot)
         $scope.addingANote = true
-    }
+}
     $scope.addNote = function(){
         $scope.markers[$scope.markers.length -1].note = $scope.noteInput
         $scope.addingANote = false
         $scope.noteInput = ''
-    }
+}
 
     $scope.removeMarker = function(index){
         $scope.markers.splice(index, 1)
