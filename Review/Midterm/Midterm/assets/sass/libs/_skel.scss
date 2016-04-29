@@ -117,26 +117,19 @@
 		@if $index {
 			@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
 		}
-
 		@return $string;
-
 	}
-
 	/// Replaces a substring within each string in a list.
 	/// @param {list} $strings List of strings.
 	/// @param {string} $search Substring.
 	/// @param {string} $replace Replacement.
 	/// @return {list} Updated list of strings.
 	@function str-replace-all($strings, $search, $replace: '') {
-
 		@each $string in $strings {
 			$strings: set-nth($strings, index($strings, $string), str-replace($string, $search, $replace));
 		}
-
 		@return $strings;
-
 	}
-
 	/// Gets a value from a map.
 	/// @author Hugo Giraudel
 	/// @param {map} $map Map.
@@ -147,56 +140,43 @@
 		@if nth($keys, 1) == null {
 			$keys: remove-nth($keys, 1);
 		}
-
 		@each $key in $keys {
 			$map: map-get($map, $key);
 		}
-
 		@return $map;
-
 	}
-
 // Mixins.
-
 	/// Sets the global box model.
 	/// @param {string} $model Model (default is content).
 	@mixin boxModel($model: 'content') {
-
 		$x: $model + '-box';
-
 		*, *:before, *:after {
 			-moz-box-sizing: #{$x};
 			-webkit-box-sizing: #{$x};
 			box-sizing: #{$x};
 		}
-
 	}
-
 	/// Wraps @content in a @media block using a given breakpoint.
 	/// @param {string} $breakpoint Breakpoint.
 	/// @param {map} $queries Additional queries.
 	@mixin breakpoint($breakpoint: null, $queries: null) {
 
 		$query: 'screen';
-
 		// Breakpoint.
 			@if $breakpoint and map-has-key($breakpoints, $breakpoint) {
 				$query: $query + ' and ' + map-get($breakpoints, $breakpoint);
 			}
-
 		// Queries.
 			@if $queries {
 				@each $k, $v in $queries {
 					$query: $query + ' and (' + $k + ':' + $v + ')';
 				}
 			}
-
         @media #{$query} {
             @content;
         }
 
 	}
-
 	/// Wraps @content in a @media block targeting a specific orientation.
 	/// @param {string} $orientation Orientation.
 	@mixin orientation($orientation) {
@@ -204,11 +184,9 @@
 			@content;
 		}
 	}
-
 	/// Utility mixin for containers.
 	/// @param {mixed} $width Width.
 	@mixin containers($width) {
-
 		// Locked?
 			$lock: false;
 
@@ -216,13 +194,11 @@
 				$width: nth($width, 1);
 				$lock: true;
 			}
-
 		// Modifiers.
 			.container.\31 25\25		{ width: 100%; max-width: $width * 1.25; min-width: $width; }
 			.container.\37 5\25			{ width: $width * 0.75; }
 			.container.\35 0\25			{ width: $width * 0.5; }
 			.container.\32 5\25			{ width: $width * 0.25; }
-
 		// Main class.
 			.container {
 				@if $lock {
@@ -232,7 +208,6 @@
 					width: $width;
 				}
 			}
-
 	}
 
 	/// Utility mixin for grid.
@@ -535,47 +510,37 @@
 
 			// meyerweb.com/eric/tools/css/reset v2.0 | 20110126 | License: none (public domain)
 				html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}body{-webkit-text-size-adjust:none}
-
 		}
-
 	}
-
 	/// Vendorizes a declaration's property and/or value(s).
 	/// @param {string} $property Property.
 	/// @param {mixed} $value String/list of value(s).
 	@mixin vendor($property, $value) {
-
 		// Determine if property should expand.
 			$expandProperty: index($vendor-properties, $property);
-
 		// Determine if value should expand (and if so, add '-prefix-' placeholder).
 			$expandValue: false;
-
 			@each $x in $value {
 				@each $y in $vendor-values {
 					@if $y == str-slice($x, 1, str-length($y)) {
 
 						$value: set-nth($value, index($value, $x), '-prefix-' + $x);
 						$expandValue: true;
-
 					}
 				}
 			}
-
 		// Expand property?
 			@if $expandProperty {
 			    @each $vendor in $vendor-prefixes {
 			        #{$vendor}#{$property}: #{str-replace-all($value, '-prefix-', $vendor)};
 			    }
 			}
-
 		// Expand just the value?
 			@elseif $expandValue {
 			    @each $vendor in $vendor-prefixes {
 			        #{$property}: #{str-replace-all($value, '-prefix-', $vendor)};
 			    }
 			}
-
 		// Neither? Treat them as a normal declaration.
 			@else {
 		        #{$property}: #{$value};
