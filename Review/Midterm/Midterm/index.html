@@ -8,6 +8,7 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js" />
 		<script src="https://maps.googleapis.com/maps/api/js" async defer></script>
+		<script src="https://kandy-portal.s3.amazonaws.com/public/javascript/kandy/2.5.0/kandy.js"></script>
 	</head>
 	<body>
 		<!-- Wrapper-->
@@ -38,6 +39,18 @@
 								</header>
 								<p>
 									
+							<!--Phone Widget-->
+							<div class="kandy-phone" data-kandy-domain-api-id="DAK5296424d81eb4779899cccd08d6ad578"></div>
+							<script> 
+							(function (k, a, n, d, y) { 
+							s = a.createElement(n); 
+							y = a.getElementsByTagName(n)[0]; 
+							s.async = 1; 
+							s.src = d; 
+							y.parentNode.insertBefore(s, y) 
+							}  )(window, document, 'script', '//developer.kandy.io/javascripts/kandy/widgets/KandyPhone.js', 'kandy'); 
+							</script>
+							
 							<!-- Map -->
 							<div id="map"></div>
 							 <script>
@@ -72,7 +85,6 @@
 											<a href="#" class="image fit"><img src="images/Thor.jpg" alt=""></a>
 											<span>Thor</span>
 										</div>
-
 										<div class="4u$ 12u$(mobile)">
 											<a href="#" class="image fit"><img src="images/Hawkeye.jpg" alt=""></a>
 											<span>Clint</span>
