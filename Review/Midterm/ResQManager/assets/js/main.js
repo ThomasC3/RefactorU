@@ -1,9 +1,60 @@
-// responder constructor //
+// controller //
+angular.module('myApp',[]) //setter
+    .controller('myController', function(){
+    	
+    })
+    
+class Responder{
+	constructor(name, skillLevel, availability, location, radioId) {
+	this.name= name
+	this.skillLevel= skillLevel
+	this.availability= availability
+	this.location= location
+	this.radioId= radioId
+}
 
+	stringify() {
+		console.log('\nName:' + this.name)
+		console.log('\nSkill Level:' + this.skillLevel)
+		console.log('\nAvailability:' + this.avialability)
+		console.log('\nLocation:' + this.location)
+		console.log('\nRadio ID:' + this.radioId)
 
+	}
+}
 
-
-
+// Configure Kandy for calls.
+(function (k, a, n, d, y) { 
+s = a.createElement(n); 
+y = a.getElementsByTagName(n)[0]; 
+s.async = 1; 
+s.src = d; 
+y.parentNode.insertBefore(s, y) 
+}  )(window, document, 'script', '//developer.kandy.io/javascripts/kandy/widgets/KandyPhone.js', 'kandy'); 
+/*global kandy*/
+//
+//kandy.setup({
+    // Designate HTML elements to be our stream containers.
+    ///remoteVideoContainer: document.getElementById('remote-stream'),
+    ///localVideoContainer: document.getElementById('local-stream'),
+    // Register listeners to call events.
+    ///listeners: {
+        ///media: onMedia,
+        // Call events.
+        ///callinitiated: onCallInitiated,
+        ///callinitiatefailed: onCallInitiateFail,
+        ///callrejected: onCallRejected,
+        ///callrejectfailed: onCallRejectFailed,
+        ///callignored: onCallIgnored,
+       ///callignorefailed: onCallIgnoreFailed,
+        ///callincoming: onCallIncoming,
+        ///callanswered: onCallAnswered,
+        ///callansweredFailed: onCallAnsweredFailed,
+        ///oncall: onCall,
+        ///callended: onCallEnded,
+        ///callendedfailed: onCallEndedFailed
+    ///}
+//});//
 
 // Google Map //
 function initMap() {

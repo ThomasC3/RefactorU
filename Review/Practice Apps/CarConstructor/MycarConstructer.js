@@ -1,9 +1,4 @@
-var Car = function(maxSpeed, driver) {
-    this.maxSpeed = maxSpeed;
-    this.driver = driver;
-    this.drive = function(speed, time) {
-        console.log(speed * time + " miles");
-    }
+
 
 
     this.logDriver = function() {

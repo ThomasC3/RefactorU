@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
 @import url("font-awesome.min.css");
 
+.kandy-phone {
+	position: relative;
+	color: black;
+	
+}
+
+
+
  .Q {
  	color: #660000
  }

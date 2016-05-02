@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app='myApp'>
 	<head>
 		<title>ResQ Manager</title>
 		<meta charset="utf-8" />
@@ -8,17 +8,11 @@
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"sync defer></script>
-		<script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=weather"></script>
-	      
-	       <!--login -->
-	       <div ui-view></div>
-           <ul>
-            	<li><a href="#/login">Login</a></li>
-           </ul>
+		<script src="https://kandy-portal.s3.amazonaws.com/public/javascript/kandy/2.5.0/kandy.js"></script>
 	
 	</head>
-	<body>
-
+	<body ng-controller='myController'>
+		
 		<!-- Wrapper-->
 			<div id="wrapper">
 
@@ -37,6 +31,13 @@
 								<header>
 									<h1>Res<span class ="Q">Q</span> Manager</h1>
 									<p>Incident Response Management Tool</p>
+							<!--login -->
+						       <div ui-view>
+					           <ul>
+					            	<li><a href="#/login">Login</a></li>
+					           </ul>
+					           </div>
+					           
 								</header>
 								<a href="#work" class="jumplink pic">
 									<span class="arrow icon fa-chevron-right"></span>
@@ -78,6 +79,9 @@
 											<a href="#" class="image fit"><img src="images/Hawkeye.jpg" alt=""></a>
 											<span>Clint</span>
 										</div>
+										
+										<!--phone widget-->
+										<div class="kandy-phone" data-kandy-domain-api-id="DAK5296424d81eb4779899cccd08d6ad578"></div>
 											
 											<!-- Map -->
 											<div id="map"></div>
@@ -97,10 +101,10 @@
 												<input type="text" name="name" placeholder="Patient Status" />
 											</div>
 											<div class="6u$ 12u$(mobile)">
-												<input type="text" name="email" placeholder="Incident Location" />
+												<input type="text" name="location" placeholder="Incident Location" />
 											</div>
 											<div class="12u$">
-												<input type="text" name="subject" placeholder="Response Status" />
+												<input type="text" name="response" placeholder="Response Status" />
 											</div>
 											<div class="12u$">
 												<textarea name="message" placeholder="Incident Description" rows="8"></textarea>
