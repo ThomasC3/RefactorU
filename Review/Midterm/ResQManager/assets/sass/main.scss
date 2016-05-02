@@ -2,11 +2,10 @@
 @import 'libs/functions';
 @import 'libs/mixins';
 @charset "UTF-8";
-@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic');
 @import url('font-awesome.min.css');
 
-
-	@import "libs/skel";
+@import "libs/skel";
 
 	@include skel-breakpoints((
 		desktop: '(min-width: 737px)',
