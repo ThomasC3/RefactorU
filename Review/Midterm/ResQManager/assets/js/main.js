@@ -1,16 +1,5 @@
 // map controller //
-angular.module('ResQ', []);
-	
-resQ.run(function($rootScope) {
-        $rootScope.logLatLng = function(e) {
-          console.log('loc', e.latLng);
-        }
-        $rootScope.wayPoints = [
-          {location: {lat:39.7392, lng: -104.0}, stopover: true},
-          {location: {lat:39.0, lng: -105.0}, stopover: true},
-        ];
-      });
-    
+
     
 // responder function //
 class Responder{
