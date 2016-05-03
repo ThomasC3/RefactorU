@@ -1,9 +1,18 @@
-// controller //
-angular.module('myApp',[]) //setter
-    .controller('myController', function(){
-    	
-    })
+// map controller //
+angular.module('ResQ', []);
+	
+resQ.run(function($rootScope) {
+        $rootScope.logLatLng = function(e) {
+          console.log('loc', e.latLng);
+        }
+        $rootScope.wayPoints = [
+          {location: {lat:39.7392, lng: -104.0}, stopover: true},
+          {location: {lat:39.0, lng: -105.0}, stopover: true},
+        ];
+      });
     
+    
+// responder function //
 class Responder{
 	constructor(name, skillLevel, availability, location, radioId) {
 	this.name= name
@@ -34,7 +43,7 @@ y.parentNode.insertBefore(s, y)
 /*global kandy*/
 //
 //kandy.setup({
-    // Designate HTML elements to be our stream containers.
+    // Designate HTML elements to be stream containers.
     ///remoteVideoContainer: document.getElementById('remote-stream'),
     ///localVideoContainer: document.getElementById('local-stream'),
     // Register listeners to call events.
@@ -55,15 +64,6 @@ y.parentNode.insertBefore(s, y)
         ///callendedfailed: onCallEndedFailed
     ///}
 //});//
-
-// Google Map //
-function initMap() {
-	var mapDiv = document.getElementById('map');
-	var map = new google.maps.Map(mapDiv, {
-	center: {lat: 44.540, lng: -78.546},
- 	zoom: 8
-});
-}
 
 
 // Responsive Design /
