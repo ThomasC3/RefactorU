@@ -16,10 +16,11 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.js"></script>
 		<script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places"></script>
 		<script src="https://rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.js"></script>
-		<script src="https://kandy-portal.s3.amazonaws.com/public/javascript/kandy/2.5.0/kandy.js"></script>
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
 	</head>
-	<body >
 	
+	<body ng-app="ngMap">
+
 		<!-- Wrapper-->
 			<div id="wrapper">
 
@@ -90,13 +91,34 @@
 										</div>
 											
 						<!-- Map -->
-					      <ng-map zoom="14" center="37.7699298, -122.4469157" style="height:90%" on-click="logLatLng()"></ng-map>
-							Directions path length: {{map.directionsRenderers[0].directions.routes[0].overview_path.length}}
-										</section>
+					      <ng-map center="[39.7392, -104.9903]" zoom="9">
+					      	<directions
+					          draggable="true"
+					          panel="directions-panel"
+					          travel-mode="DRIVING"
+					          origin="Boulder, colorado"
+					          destination="Denver, Colorado">
+					        </directions>
+	
+					        <custom-marker id="responder"
+					          position="Boulder, Colorado">
+					          <div> Responder </div>
+					        </custom-marker>
+	
+					        <custom-marker id="end"
+					          position="denver, co">
+					          <div> Incident </div>
+					        </custom-marker>
+					      </ng-map>
+	
+					      Directions path length:
+        				{{map.directionsRenderers[0].directions.routes[0].overview_path.length}}
+    					<div id="directions-panel" style="width: 100%; float:left; height: 100%; overflow: auto; padding: 0px 5px"></div>
+									</section>
 										
-						<!--Phone Widget-->
-							<div class="kandy-phone" data-kandy-domain-api-id="DAK5296424d81eb4779899cccd08d6ad578"></div>
-										</article>
+						<!---Google Hangouts--->
+						<div style="float:right;" class="g-hangout" data-render="createhangout"></div>
+						</article>
 						
 							<!-- Report -->
 							<article id="contact" class="panel">
