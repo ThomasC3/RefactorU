@@ -1,6 +1,27 @@
-// map controller //
-
+// responder directory //
+angular.module('ResQApp', [])
+    .controller('ResQController', function() {
     
+    var responderList = this;
+    
+    responderList.toggle = false;
+    
+    responderList.list = [
+        {name:'B.Widow', skillLevel: 'Medic', img:'Black Widow.jpg'},
+        {name:'Dr. Banner', skillLevel: 'Medic', img:'Dr. Banner.jpg'}, 
+        {name:'Tony', skillLevel: 'Hazmat', img:'Iron Man.jpg'}, 
+        {name:'Thor', skillLevel: 'Rescue', img:'Thor.jpg'},
+        {name:'Cap', skillLevel: 'Rescue', img:'Cap.jpg'},
+        {name:'Clint', skillLevel: 'Rescue', img:'Hawkeye'},
+
+         ];
+    responderList.addPerson = function() {
+          responderList.list.push({name: responderList.name, skillLevel: responderList.skillLevel});
+          responderList.name = '';
+          responderList.class = '';
+        };
+});
+
 // responder function //
 class Responder{
 	constructor(name, skillLevel, availability, location, radioId) {
@@ -20,39 +41,6 @@ class Responder{
 
 	}
 }
-
-// Configure Kandy for calls.
-(function (k, a, n, d, y) { 
-s = a.createElement(n); 
-y = a.getElementsByTagName(n)[0]; 
-s.async = 1; 
-s.src = d; 
-y.parentNode.insertBefore(s, y) 
-}  )(window, document, 'script', '//developer.kandy.io/javascripts/kandy/widgets/KandyPhone.js', 'kandy'); 
-/*global kandy*/
-//
-//kandy.setup({
-    // Designate HTML elements to be stream containers.
-    ///remoteVideoContainer: document.getElementById('remote-stream'),
-    ///localVideoContainer: document.getElementById('local-stream'),
-    // Register listeners to call events.
-    ///listeners: {
-        ///media: onMedia,
-        // Call events.
-        ///callinitiated: onCallInitiated,
-        ///callinitiatefailed: onCallInitiateFail,
-        ///callrejected: onCallRejected,
-        ///callrejectfailed: onCallRejectFailed,
-        ///callignored: onCallIgnored,
-       ///callignorefailed: onCallIgnoreFailed,
-        ///callincoming: onCallIncoming,
-        ///callanswered: onCallAnswered,
-        ///callansweredFailed: onCallAnsweredFailed,
-        ///oncall: onCall,
-        ///callended: onCallEnded,
-        ///callendedfailed: onCallEndedFailed
-    ///}
-//});//
 
 
 // Responsive Design /
