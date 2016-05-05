@@ -33,7 +33,7 @@
 /* Basic */
 
 	body {
-		background-image: url('images/overlay.png'), url('images/pic11.jpg');
+		background-image: url('images/overlay.png'), url('images/chrome.jpg');
 		background-repeat: repeat, no-repeat;
 		background-size: auto, 100% 100%;
 		font-family: 'Source Sans Pro', sans-serif;
@@ -135,8 +135,8 @@
 		}
 
 		input[type="text"],
-		input[type="email"],
-		input[type="password"],
+		input[type="patient"],
+		input[type="response"],
 		select,
 		textarea {
 			-webkit-appearance: none;
@@ -152,8 +152,8 @@
 		}
 
 		input[type="text"],
-		input[type="email"],
-		input[type="password"],
+		input[type="patient"],
+		input[type="response"],
 		select {
 			line-height: 1.35em;
 		}
@@ -170,9 +170,6 @@
 			color: #999;
 		}
 
-		:-ms-input-placeholder {
-			color: #999;
-		}
 	}
 
 /* Section/Article */
@@ -199,17 +196,17 @@
 
 		img {
 			display: block;
-			width: 100%;
+			width: 50%;
 		}
 
 		&.fit {
 			display: block;
-			width: 100%;
+			width: 50%;
 		}
 
 		&.featured {
 			display: block;
-			width: 100%;
+			width: 50%;
 			margin: 0 0 2em 0;
 		}
 
@@ -349,9 +346,9 @@
 		position: relative;
 	}
 
-/* Me */
+/* responders */
 
-	#me {
+	#responders {
 		.pic {
 			position: relative;
 			display: block;
@@ -421,7 +418,7 @@
 				min-width: 1000px;
 				min-height: 100%;
 				overflow-y: scroll;
-				background-attachment: fixed;
+				background-attachhoment: fixed;
 				font-size: 14pt;
 				line-height: 1.75em;
 			}
@@ -584,7 +581,7 @@
 				width: 45em;
 			}
 
-		/* Me */
+		/* responders */
 
 			#me {
 				padding: 0;
@@ -792,7 +789,7 @@
 				}
 			}
 
-		/* Me */
+		/* responders*/
 			#me {
 				.pic {
 					width: 100%;

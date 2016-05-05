@@ -1,6 +1,6 @@
 // responder directory //
-angular.module('ResQApp', [])
-    .controller('ResQController', function() {
+angular.module('ResQApp', ['ngMap'])
+    .controller('ResQController', ['NgMap'],function(NgMap) {
     
     var responderList = this;
     
@@ -15,28 +15,41 @@ angular.module('ResQApp', [])
         {name:'Clint', med:'FA', skillLevel: 'P', driver:'Truck', availability:'available', location: '', radioId:'1906', img:'Hawkeye'},
          ];
     responderList.addPerson = function() {
-          responderList.list.push({name: responderList.name, skillLevel: responderList.skillLevel});
+          responderList.list.push({name: responderList.name, med: responderList.med, skillLevel: responderList.skillLevel, driver: responderList.driver, availability: responderList.availability, location: responderList.location, radioId: responderList.radioId, img: responderList.img});
           responderList.name = '';
+          responderList.med = '';
           responderList.skillLevel = '';
+          responderList.driver = '';
+          responderList.availability = '';
+          responderList.location = '';
+          responderList.radioId = '';
+          responderList.img = '';
         };
 });
 
 // responder function //
-class Responder{
-	constructor(name, skillLevel, availability, location, radioId) {
+class responder{
+	constructor(name, med, skillLevel, driver, availability, location, radioId, img) {
 	this.name= name
+	this.med= med
 	this.skillLevel= skillLevel
+	this.driver= driver
 	this.availability= availability
 	this.location= location
 	this.radioId= radioId
+	this.img= img
 }
 
 	stringify() {
 		console.log('\nName:' + this.name)
+		console.log('\nDriver:' + this.driver)
 		console.log('\nSkill Level:' + this.skillLevel)
+		console.log('\nMed:'+ this.med)
 		console.log('\nAvailability:' + this.avialability)
 		console.log('\nLocation:' + this.location)
 		console.log('\nRadio ID:' + this.radioId)
+		console.log('\nImage:' + this.img)
+		
 	}
 }
 

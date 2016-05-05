@@ -759,7 +759,7 @@
 /* Basic */
 
 	body {
-		background-image: url("images/overlay.png"), url("images/chrome.jpg");
+		background-image: url("images/overlay.png"), url("images/carbon.jpg");
 		background-repeat: repeat, no-repeat;
 		background-size: auto, 100% 100%;
 		font-family: 'Source Sans Pro', sans-serif;
@@ -1058,7 +1058,7 @@
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
-			color: #4d0000
+			color: #7190C1
 		}
 
 		.icon > .label {

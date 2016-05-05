@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
+<html ng-app="ResQApp">
 		<title>ResQ Manager</title> 
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -19,11 +18,9 @@
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
 	</head>
 	
-	<body ng-app="ngMap">
-
-						<!--------------------------------------------------------------- Wrapper--------------------------------------------------------------->
-			<div id="wrapper">
-
+			<body ng-contoller="ResQController">
+						<!--------------------------------------------------------------- Wrapper------------------------------------------------------------>
+					<div id="wrapper">
 						<!--------------------------------------------------------------- Nav --------------------------------------------------------------->
 					<nav id="nav">
 						<a href="#me" class="icon fa-home active"><span>Home</span></a>
@@ -34,7 +31,7 @@
 						<!--------------------------------------------------------------- Home --------------------------------------------------------------->
 						<div id="main">
 				
-						<!--------------------------------------------------------------- Welcome--------------------------------------------------------------->
+						<!--------------------------------------------------------------- Welcome------------------------------------------------------------->
 							<article id="me" class="panel">
 								<header>
 									<h1>Res<span class ="Q">Q</span> Manager</h1>
@@ -54,8 +51,7 @@
 									<span>Jump to Console</span>
 								</a>
 							</article>
-
-						<!--------------------------------------------------------------- Responders --------------------------------------------------------------->
+						<!--------------------------------------------------------------- Responders --------------------------------------------------------->
 								<article id="work" class="panel">
 								<header>
 									<h2>Res<span class ="Q">Q</span> Responders</h2>
@@ -86,13 +82,13 @@
 										</div>
 											
 						<!--------------------------------------------------------------- Map --------------------------------------------------------------->
-									      <ng-map center="current-location" zoom="9">
+									      <ng-map center="current-location" zoom="9" map-type-id="HYBRID">
 									      	<directions
 									          draggable="true"
 									          panel="directions-panel"
 									          travel-mode="DRIVING"
 									          origin="current-location"
-									          zoom= "10"
+									          zoom= "9"
 									          destination="Denver, Colorado">
 									        </directions>
 					
@@ -146,7 +142,7 @@
 					</div>
 
 				<!--------------------------------------------------------------- Footer --------------------------------------------------------------->
-					<div id="footer"></div>
+					<!--<div id="footer"></div>-->
 			</div>
 	</body>
 </html>

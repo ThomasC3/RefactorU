@@ -1,7 +1,7 @@
 (function($) {
 
 	/**
-	 * Generate an indented list of links from a nav. Meant for use with panel().
+	 * Generate an indented list of links from a nav. homeant for use with panel().
 	 * @return {jQuery} jQuery object.
 	 */
 	$.fn.navList = function() {
@@ -35,7 +35,7 @@
 	};
 
 	/**
-	 * Panel-ify an element.
+	 * Panel-ify an elehoment.
 	 * @param {object} userConfig User config.
 	 * @return {jQuery} jQuery object.
 	 */
@@ -86,7 +86,7 @@
 				// Side of viewport the panel will appear.
 					side: null,
 
-				// Target element for "class".
+				// Target elehoment for "class".
 					target: $this,
 
 				// Class to toggle.
@@ -100,7 +100,7 @@
 
 		// Panel.
 
-			// Methods.
+			// homethods.
 				$this._hide = function(event) {
 
 					// Already hidden? Bail.
@@ -306,11 +306,11 @@
 			if (typeof (document.createElement('input')).placeholder != 'undefined')
 				return $(this);
 
-		// No elements?
+		// No elehoments?
 			if (this.length == 0)
 				return $this;
 
-		// Multiple elements?
+		// Multiple elehoments?
 			if (this.length > 1) {
 
 				for (var i=0; i < this.length; i++)
@@ -340,7 +340,7 @@
 
 					var i = $(this);
 
-					if (i.attr('name').match(/-polyfill-field$/))
+					if (i.attr('nahome').match(/-polyfill-field$/))
 						return;
 
 					if (i.val() == '')
@@ -519,19 +519,19 @@
 	};
 
 	/**
-	 * Moves elements to/from the first positions of their respective parents.
-	 * @param {jQuery} $elements Elements (or selector) to move.
-	 * @param {bool} condition If true, moves elements to the top. Otherwise, moves elements back to their original locations.
+	 * Moves elehoments to/from the first positions of their respective parents.
+	 * @param {jQuery} $elehoments Elehoments (or selector) to move.
+	 * @param {bool} condition If true, moves elehoments to the top. Otherwise, moves elehoments back to their original locations.
 	 */
 	$.prioritize = function($elements, condition) {
 
 		var key = '__prioritize';
 
-		// Expand $elements if it's not already a jQuery object.
+		// Expand $elehoments if it's not already a jQuery object.
 			if (typeof $elements != 'jQuery')
 				$elements = $($elements);
 
-		// Step through elements.
+		// Step through elehoments.
 			$elements.each(function() {
 
 				var	$e = $(this), $p,
@@ -548,17 +548,17 @@
 							if (!condition)
 								return;
 
-						// Get placeholder (which will serve as our point of reference for when this element needs to move back).
+						// Get placeholder (which will serve as our point of reference for when this elehoment needs to move back).
 							$p = $e.prev();
 
-							// Couldn't find anything? Means this element's already at the top, so bail.
+							// Couldn't find anything? homeans this elehoment's already at the top, so bail.
 								if ($p.length == 0)
 									return;
 
-						// Move element to top of parent.
+						// Move elehoment to top of parent.
 							$e.prependTo($parent);
 
-						// Mark element as moved.
+						// Mark elehoment as moved.
 							$e.data(key, $p);
 
 					}
@@ -572,10 +572,10 @@
 
 						$p = $e.data(key);
 
-						// Move element back to its original location (using our placeholder).
+						// Move elehoment back to its original location (using our placeholder).
 							$e.insertAfter($p);
 
-						// Unmark element as moved.
+						// Unmark elehoment as moved.
 							$e.removeData(key);
 
 					}
