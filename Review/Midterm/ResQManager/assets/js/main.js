@@ -7,18 +7,17 @@ angular.module('ResQApp', [])
     responderList.toggle = false;
     
     responderList.list = [
-        {name:'B.Widow', skillLevel: 'Medic', img:'Black Widow.jpg'},
-        {name:'Dr. Banner', skillLevel: 'Medic', img:'Dr. Banner.jpg'}, 
-        {name:'Tony', skillLevel: 'Hazmat', img:'Iron Man.jpg'}, 
-        {name:'Thor', skillLevel: 'Rescue', img:'Thor.jpg'},
-        {name:'Cap', skillLevel: 'Rescue', img:'Cap.jpg'},
-        {name:'Clint', skillLevel: 'Rescue', img:'Hawkeye'},
-
+        {name:'B.Widow', med:'PA', skillLevel: 'Q', driver:'Truck', availability:'available', location: '', radioId:'1901', img:'Black Widow.jpg'},
+        {name:'Dr. Banner', med:'DR', skillLevel: 'RS', driver:'Truck', availability:'not available', location: '', radioId:'1902', img:'Dr. Banner.jpg'}, 
+        {name:'Tony', med:'RN', skillLevel: 'S', driver:'Truck', availability:'available', location: '', radioId:'1903', img:'Iron Man.jpg'}, 
+        {name:'Thor', med:'EMT', skillLevel: 'Q', driver:'Truck', availability:'not available', location: '', radioId:'1904', img:'Thor.jpg'},
+        {name:'Cap', med:'PARM', skillLevel: 'RS', driver:'Truck', availability:'available', location: '', radioId:'1905', img:'Cap.jpg'},
+        {name:'Clint', med:'FA', skillLevel: 'P', driver:'Truck', availability:'available', location: '', radioId:'1906', img:'Hawkeye'},
          ];
     responderList.addPerson = function() {
           responderList.list.push({name: responderList.name, skillLevel: responderList.skillLevel});
           responderList.name = '';
-          responderList.class = '';
+          responderList.skillLevel = '';
         };
 });
 
@@ -38,10 +37,8 @@ class Responder{
 		console.log('\nAvailability:' + this.avialability)
 		console.log('\nLocation:' + this.location)
 		console.log('\nRadio ID:' + this.radioId)
-
 	}
 }
-
 
 // Responsive Design /
 (function($) {
