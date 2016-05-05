@@ -12,7 +12,7 @@ angular.module('ResQApp', ['ngMap'])
         {name:'Tony', med:'RN', skillLevel: 'S', driver:'Truck', availability:'available', location: '', radioId:'1903', img:'Iron Man.jpg'}, 
         {name:'Thor', med:'EMT', skillLevel: 'Q', driver:'Truck', availability:'not available', location: '', radioId:'1904', img:'Thor.jpg'},
         {name:'Cap', med:'PARM', skillLevel: 'RS', driver:'Truck', availability:'available', location: '', radioId:'1905', img:'Cap.jpg'},
-        {name:'Clint', med:'FA', skillLevel: 'P', driver:'Truck', availability:'available', location: '', radioId:'1906', img:'Hawkeye'},
+        {name:'Clint', med:'FA', skillLevel: 'P', driver:'Truck', availability:'available', location: '', radioId:'1906', img:'Hawkeye.jpg'},
          ];
     responderList.addPerson = function() {
           responderList.list.push({name: responderList.name, med: responderList.med, skillLevel: responderList.skillLevel, driver: responderList.driver, availability: responderList.availability, location: responderList.location, radioId: responderList.radioId, img: responderList.img});
@@ -42,10 +42,10 @@ class responder{
 
 	stringify() {
 		console.log('\nName:' + this.name)
-		console.log('\nDriver:' + this.driver)
-		console.log('\nSkill Level:' + this.skillLevel)
 		console.log('\nMed:'+ this.med)
-		console.log('\nAvailability:' + this.avialability)
+		console.log('\nSkill Level:' + this.skillLevel)
+		console.log('\nDriver:' + this.driver)
+		console.log('\nAvailability:' + this.availability)
 		console.log('\nLocation:' + this.location)
 		console.log('\nRadio ID:' + this.radioId)
 		console.log('\nImage:' + this.img)

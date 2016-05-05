@@ -53,6 +53,26 @@
 							</article>
 						<!--------------------------------------------------------------- Responders --------------------------------------------------------->
 								<article id="work" class="panel">
+								<div class="directory">
+							        <input type="text" ng-model="search"/>
+							        <ul ng-class="{'hidden': !responderList.toggle}">
+							        
+							            <li ng-repeat="item in responderList.list | filter:search"
+							                ng-class="item.available > ? 'avaialable' : 'not-available'"
+							                ng-include= "'responder.'"
+							                >
+							            </li>
+							        
+							        </ul>
+							        <button ng-show="!responderList.toggle" ng-click="responderList.toggle = true">Show Responders</button>
+							        <button ng-hide="!responderList.toggle" ng-click="responderList.toggle = false">Hide Responders</button>
+							
+							        <form ng-submit="responderList.addPerson()">
+							            <input type="text" placeholder="Name" ng-model="responderList.name"/>
+							            <input type="text" placeholder="Availability" ng-model="responderList.availability"/>
+							            <input type="submit" value="Submit"/>
+							        </form>
+							    </div>
 								<header>
 									<h2>Res<span class ="Q">Q</span> Responders</h2>
 								</header>
