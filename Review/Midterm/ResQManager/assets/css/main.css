@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
 @import url("font-awesome.min.css");
 
-.kandy-phone {
+.rprofile {
 	position: relative;
 	color: black;
-	
+	font-family: arial;
 }
 
 
@@ -1116,14 +1116,18 @@
 		color: rgba(255, 255, 255, 0.45);
 	}
 
-		#footer a {
-			color: #ddd;
-			color: rgba(255, 255, 255, 0.65);
-			-moz-transition: color .25s ease-in-out;
-			-webkit-transition: color .25s ease-in-out;
-			-ms-transition: color .25s ease-in-out;
-			transition: color .25s ease-in-out;
-		}
+	#footer a {
+		color: #ddd;
+		color: rgba(255, 255, 255, 0.65);
+		-moz-transition: color .25s ease-in-out;
+		-webkit-transition: color .25s ease-in-out;
+		-ms-transition: color .25s ease-in-out;
+		transition: color .25s ease-in-out;
+	}
+
+.hidden {
+	display:none;
+}
 
 /* Desktop */
 

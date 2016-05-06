@@ -1,6 +1,6 @@
 // responder directory //
 angular.module('ResQApp', ['ngMap'])
-    .controller('ResQController', ['NgMap'],function(NgMap) {
+    .controller('ResQController', ['NgMap',function(NgMap) {
     
     var responderList = this;
     
@@ -25,8 +25,14 @@ angular.module('ResQApp', ['ngMap'])
           responderList.radioId = '';
           responderList.img = '';
         };
-});
-
+        
+    responderList.show = function () {
+    	console.log(true)
+    	responderList.toggle=true
+ 
+    }
+}]);
+ 
 // responder function //
 class responder{
 	constructor(name, med, skillLevel, driver, availability, location, radioId, img) {

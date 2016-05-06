@@ -18,7 +18,7 @@
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
 	</head>
 	
-			<body ng-contoller="ResQController">
+			<body ng-controller="ResQController as responderList">
 						<!--------------------------------------------------------------- Wrapper------------------------------------------------------------>
 					<div id="wrapper">
 						<!--------------------------------------------------------------- Nav --------------------------------------------------------------->
@@ -52,15 +52,18 @@
 								</a>
 							</article>
 						<!--------------------------------------------------------------- Responders --------------------------------------------------------->
+								
 								<article id="work" class="panel">
 								<div class="directory">
+									<header>
+									<h2>Res<span class ="Q">Q</span> Responders</h2>
+								</header>
 							        <input type="text" ng-model="search"/>
 							        <ul ng-class="{'hidden': !responderList.toggle}">
 							        
-							            <li ng-repeat="item in responderList.list | filter:search"
-							                ng-class="item.available > ? 'avaialable' : 'not-available'"
-							                ng-include= "'responder.'"
-							                >
+							            <li class="rprofile" ng-repeat="item in responderList.list"
+							                ng-class="item.availability ? 'avaialable' : 'not-available'">
+							            	{{item.img}}-{{item.name}}-{{item.availability}}-{{item.skillLevel}}-{{item.med}}-{{item.driver}}-{{item.location}}-{{item.radioId}}
 							            </li>
 							        
 							        </ul>
@@ -70,45 +73,22 @@
 							        <form ng-submit="responderList.addPerson()">
 							            <input type="text" placeholder="Name" ng-model="responderList.name"/>
 							            <input type="text" placeholder="Availability" ng-model="responderList.availability"/>
+							            <input type="text" placeholder="Skill Level" ng-model="responderList.skillLevel"/>
+							            <input type="text" placeholder="Driver" ng-model="responderList.driver"/>
+							            <input type="text" placeholder="Location" ng-model="responderList.location"/>
+							            <input type="text" placeholder="Radio ID" ng-model="responderList.radioID"/>
 							            <input type="submit" value="Submit"/>
 							        </form>
 							    </div>
-								<header>
-									<h2>Res<span class ="Q">Q</span> Responders</h2>
-								</header>
-								<p>Responder Legend</p>
 								<section>
-									<div class="row">
-										
-											<a href="#" class="image fit"><img src="images/Black Widow.jpg" alt=""></a>
-											<span>B.Widow</span>
-										
-											<a href="#" class="image fit"><img src="images/Dr. Banner.jpg" alt=""></a>
-											<span>Dr. Banner</span>
-											
-											<a href="#" class="image fit"><img src="images/Cap.jpg" alt=""></a>
-											<span>Cap</span>
-											
-											<a href="#" class="image fit"><img src="images/Iron Man.jpg" alt=""></a>
-											<span>Tony</span>
-											
-											<a href="#" class="image fit"><img src="images/Thor.jpg" alt=""></a>
-											<span>Thor</span>
-											
-										<div class="4u$ 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/Hawkeye.jpg" alt=""></a>
-											<span>Clint</span>
-										</div>
-										</div>
-											
 						<!--------------------------------------------------------------- Map --------------------------------------------------------------->
-									      <ng-map center="current-location" zoom="9" map-type-id="HYBRID">
+									      <ng-map center="current-location" map-type-id="HYBRID">
 									      	<directions
 									          draggable="true"
 									          panel="directions-panel"
 									          travel-mode="DRIVING"
 									          origin="current-location"
-									          zoom= "9"
+									          zoom= "4"
 									          destination="Denver, Colorado">
 									        </directions>
 					
@@ -117,7 +97,7 @@
 									          <div> Responder </div>
 									        </custom-marker>
 					
-									        <custom-marker id="end"
+									        <custom-marker id="incident"
 									          position="denver, co">
 									          <div> Incident </div>
 									        </custom-marker>
