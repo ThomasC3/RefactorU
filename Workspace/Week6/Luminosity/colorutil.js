@@ -1,4 +1,4 @@
-var exports = module.exports = {};
+module.exports = {
 var red = process.argv[2];
 var green = process.argv[3];
 var blue = process.argv[4];
