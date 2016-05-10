@@ -7,11 +7,11 @@ fs.readdir(mydir, function(err, files){
   if(err){
     throw err
   }
-  console.log(files);
+  // console.log(files);
   files.forEach(function(filename){
     var ext = path.ext(filename);
-    if(rd == ext1){
+    // if( == ext1){
       console.log(filename);
-    }
+    
   });
 });
