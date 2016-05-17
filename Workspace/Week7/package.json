@@ -1,5 +1,5 @@
 {
-  "name": "workspace",
+  "name": "c9server",
   "version": "1.0.0",
   "description": "mvc",
   "main": "server.js",
@@ -11,7 +11,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
