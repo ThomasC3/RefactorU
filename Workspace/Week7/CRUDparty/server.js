@@ -2,6 +2,7 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var morgan = require('morgan')
 var mongoose = require('mongoose')
+var APIRoutes = require('./routes.js')
 
 
 // connect to database
@@ -12,12 +13,13 @@ mongoose.connect('mongodb://localhost/stolenCredit')
 var app = express()
 
 
-app.use ( morgan('dev') )
-app.use
+app.use( morgan('dev') )
+app.use( bodyParser.urlencoded({extened: true}))
+app.use( bodyParser.json())
+app.use( express.static)
 
 // listen for connections
-var http = require('http');
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World from Cloud9\n');
-}).listen(process.env.PORT);
+var port = process.env.PORT || 3000 
+app.listen(port function(){
+    console.log('Port listening on' +)
+})
