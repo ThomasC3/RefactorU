@@ -13,16 +13,18 @@
 
 // module.exports = plates
 
-var mongoose = require('mongoose'),
-    Schema = mongoose.Schema,
+    var
+    mongoose = require('mongoose'),
+    Schema   = mongoose.Schema,
     plateSchema = new Schema({
-      name : String,
-      category: {type: String, unique: true, required: true},
+      name: String,
+      category: {type: String, required: true},
       price: Number,
       keywords: Array
-      
     })
+
     module.exports = {
-    Plate: mongoose.model('Plate', plateSchema)
+        plates: mongoose.model('Plate', plateSchema)
     }
+
     

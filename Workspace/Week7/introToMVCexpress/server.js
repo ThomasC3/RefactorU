@@ -4,18 +4,18 @@ var Express = require('express'),
   app = Express(),
   port = process.env.PORT || 8080,
   apiRoutes = require('./api_routes'),
-  mongoose = require('mongoose'),
-  path = require('path');
- 
- // connecting Mongo to web server 
-  mongoose.connect('mongodb://' + process.env.IP + '/food', function(err){
-    if(err) console.log("fix your mongod")
+  path      = require('path'),
+  mongoose = require('mongoose')
+// 'mongodb://'+ process.env.IP +'/food'
+  mongoose.connect('mongodb://localhost/food', function(err){
+    if(err) console.log("fix your mongod bro")
   })
 
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
-app.use(express.static(path.join))
+app.use(Express.static(path.join(__dirname, './public')))
+
 app.use('/api', apiRoutes)
 
 app.listen(port, function (err) {
