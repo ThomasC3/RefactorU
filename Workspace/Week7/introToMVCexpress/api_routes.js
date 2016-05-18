@@ -5,5 +5,8 @@ var ctrls = require('./controllers'),
     apiRouter.route('/plates')
       .get(ctrls.platesController.all)
       .post(ctrls.platesController.create)
+    apiRouter.route('/plates:id')
+      .get(ctrls.platesController.update)
+      .delete(ctrls.platesController.delete)      
 
 module.exports = apiRouter
