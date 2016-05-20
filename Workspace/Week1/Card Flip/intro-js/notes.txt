@@ -1,0 +1,105 @@
+A programming language is a language that lets you give instructions to a computer.
+
+In English, we write SENTENCES, composed of WORDS, which have TYPES (noun, verb)
+in Javascript, we write STATEMENTS, composed (mostly) of VALUES, which have TYPES (number, string). 
+
+
+PRIMITIVE TYPES: Number, String, Boolean, null, and undefined.
+
+
+Numbers: 
+number literal - single most straightfoward way to represent a number
+
+PEMDAS determines the order that math happens in. If you're not sure, just add parentheses.
+
+operator : lets you combine 1 (unary), 2(binary) or 3 (ternary) values (operands) to produce a new values. 
+
+
+fizzbuzz: print all the numbers from 1 - 15. If the number is divisible by 3, also print 'fizz'. If it's divisible by 5, print 'buzz', unless it's divisible by 3 AND 5, then print 'fizzbuzz'. 
+
+
+String literal:
+'hello'
+"A witty saying proves nothing."
+'don\'t do this' // backslash ESCAPES the apostrophe
+
+string operators
++ : concatenation. 
+
+strings have PROPERTIES
+all strings have a 'length' property, which tells you how long the string is.
+all strings have numerical indexes, which tell you what letter is at a particular location.
+
+dot notation is more convenient. It's easier to type, and easier to read. Sometimes you can't use it. 
+
+valid variable names:
+    a variable name must start with a letter, underscore, or $. After the first character, it can also have numbers.
+
+    valid names:
+        foo
+        result
+        result2
+        __secret
+        $$billz
+    invalid names:
+        2fast2furious
+        me&you
+        0
+
+Boolean literal
+    true
+    false
+
+boolean operators
+    ! - NOT operator
+    && - AND operator
+    || - OR operator
+
+    <, <=, >, >=, ===, ==, !==
+
+
+if else-chain:
+    starts with exactly 1 if-statement
+    then has 0-infinite else-if statements
+    then has 0 or 1 else statement
+
+null
+
+0 and NaN are falsey. all other numbers are truthey
+'' is falsey. all other strings are truthey.
+null and undefined are falsey.
+all other values are truthey.
+
+
+====== Non-Primitive =======
+
+Arrays
+    Arrays are like lists - basically a comma separated list of values
+
+Literal - []
+[1, 2, 3]
+["dog", "cat", "potato"]
+
+Array elements are assigned to indexes
+    Where they are in the array
+
+
+Objects
+    Something that describes properties about a thing
+Literal - {}
+
+{
+    name : 'Bill',
+    age : 104
+}
+
+Objects have named PROPERTIES or KEYS, 
+   not numbered indexes
+    
+
+
+Function -  is a reusable block of code (i.e. a set of instructions) that takes some input, and produces output.
+
+scope - an area in your code where some set of variables is accessible.
+
+ideally, functions should be PURE functions. They take input, produce output, and have no side effects. Pure functions are easier to debug, but sometimes we can't make all of our functions pure.

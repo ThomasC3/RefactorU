@@ -1,0 +1,15 @@
+<button ng-click='hCtrl.createDisc()'>New Disc</button>
+    <UL>
+      <li ng-repeat="disc in hCtrl.discs">
+          Name: {{ disc.name }}
+          <br>
+          Weight: {{ disc.weight }}
+          <br>
+          Color: {{ disc.color }}
+          <br>
+          Category: {{ disc.category }}
+          <br>
+          <img style="height:300px; width:300px"src="{{ disc.picture }}"/>
+          <button ng-click='hCtrl.editDisc(disc._id)'>Edit</button>
+      </li>
+    </UL>

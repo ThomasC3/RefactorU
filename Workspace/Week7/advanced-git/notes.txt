@@ -1,0 +1,49 @@
+Advanced Git:  Git Gud
+
+multiple ways to refer to commits
+
+commit ID - never changes
+
+HEAD - always refers to your current, checked out commit
+
+MASTER - branchnames refer to the most recent commit in that branch
+
+HEAD^ - one commit before head
+HEAD^^ - two commits before head
+HEAD~1 - one commit before head
+HEAD~2 - two commits before head
+HEAD^^^^, HEAD~4 - both refer to four commits before head
+
+
+git diff <commit name>
+
+visiting the past: git checkout <commit name>
+change the current, checked out commit to the named commit
+
+undoing changes you have NOT committed: git reset --hard HEAD
+undoing changes you HAVE committed: git reset --hard HEAD~1
+try to avoid doing a hard reset, ESPECIALLY if the code has already been shared with someone else.
+
+
+git checkout <commit name> <folder name>
+does NOT change the current checked out commit. This command changes the actual files in the named folder to look the way they did in the named commits
+
+
+view current branches: git branch
+create a new branch: git branch <branch name>
+
+apply changes from one branch to current branch:
+git merge <branch name>
+
+delete a branch: git branch -d <branch name>
+
+3 types of merges:
+easiest : fast-forward merge. git does not need to create a new commit
+medium : automatic merge. git automatically creates a new commit.
+hardest : manual merge. YOU must fix merge conflicts, and then YOU must create a new commit.
+
+
+when do git pull, it's actually a shorthand for two different commands:
+
+git fetch origin master
+git merge remotes/origin/master
