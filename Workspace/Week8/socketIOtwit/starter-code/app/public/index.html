@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TWITTER SOCKETS</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.js"></script>
+     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>Tweet me a Socket</h1>
+    <form name="search">
+    <div class="form-group">
+      <input type="text" class="form-control">
+    </div>
+    <input type="submit" class="btn btn-default">
+    </form>
+    <div class="" id="tweet-container">
+    </div>
+    <script type="text/javascript">
+        var socket = io()
+
+       socket.on('connect', function() {
+         console.log('Connected!')
+       })
+
+       socket.on('tweets', function(tweet) {
+
+         console.log(tweet)
+       })
+
+    //    $('form').submit(function(e){
+       //
+    //     socket.emit('updateTerm', search_term);
+    //     });
+       //
+    //     socket.on('updatedTerm', function(searchTerm) {
+    //       console.log(searchTerm);
+    //     });
+
+    </script>
+  </body>
+</html>
