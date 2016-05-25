@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>Angular Directives Practice</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.4/angular.js"></script>
+</head>
+<body ng-init="num=5; students=['John', 'Mary', 'Kenneth', 'Holly']">
+    <input type="text" ng-model="name">
+<h3> {{ name }} </h3>
+<button ng-click="count = count + 1" ng-init="count=0">Increment Up</button>
+<div> {{ count }} </div>
+</body>
+</html>

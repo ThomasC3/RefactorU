@@ -1,0 +1,28 @@
+                    over-thirty {
+                    background: red;
+                    color: white;
+                }
+                    under-thirty {
+                    background: blue;
+                    color: white;
+                }
+                .hidden {
+                    display: none;
+                }
+                ul {
+                    list-style: none;
+                }
+                li {
+                    display: flex;
+                    margin-bottom: 10px;
+                }
+                li span {
+                    display:inline-block;
+                    line-height: 50px;
+                }
+                li img {
+                    margin-right: 10px;
+                    border-radius: 50%;
+                    width: 50px;
+                    height: 50px;
+                }

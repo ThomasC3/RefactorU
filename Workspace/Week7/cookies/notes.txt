@@ -1,0 +1,7 @@
+Cookies and Sessions
+
+a cookie is a short piece of data that a server can instruct a browser to store.
+
+any time a browser returns to a website, it sends up all the cookies that were set by that site. 
+
+

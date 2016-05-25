@@ -1,0 +1,21 @@
+<div>
+
+  <h1 ng-if= "hCtrl.page == 'create'"> create disc
+  </h1>
+  <h1 ng-if= "hCtrl.page == 'edit'"> edit disc
+  </h1>
+</div>
+<form>
+  Name:<input type="text"  ng-model="hCtrl.newDisc.name">
+  <br>
+  Weight:<input type="number" name="weight" ng-model="hCtrl.newDisc.weight">
+  <br>
+  Color:<input type="text" name="color" ng-model="hCtrl.newDisc.color">
+  <br>
+  Category:<input type="text" name="category" ng-model="hCtrl.newDisc.category">
+  <br>
+  Picture URL:<input type="text" name="picture" ng-model="hCtrl.newDisc.picture">
+  <button type="button" ng-if= "hCtrl.page == 'create'" ng-click="hCtrl.submitDisc(hCtrl.newDisc)">Submit Disc</button>
+  <button type="button" ng-if= "hCtrl.page == 'edit'" ng-click="hCtrl.updateDisc(hCtrl.newDisc)">Edit</button>
+
+</form>

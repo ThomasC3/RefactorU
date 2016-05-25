@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="directoryApp">
+    <head>
+        <title>Playing With Angular</title>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.4/angular.js"></script>
+                <script src="Datafilter2.0.js"></script>
+    </head>
+    <body ng-controller="directoryController">
+        
+        <input type="text" ng-model="search"/>
+        
+        <ul>
+            <li ng-repeat="item in list | filter:search">
+                {{item.name}}-{{item.age}}
+            </li>
+        </ul>
+        
+    </body>
+</html>
