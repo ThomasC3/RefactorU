@@ -1,0 +1,20 @@
+{
+  "name": "cryypt",
+  "version": "1.0.0",
+  "description": "Basic web dev assignment portfolio (currently under construction)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThomasC3/RefactorU.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThomasC3/RefactorU/issues"
+  },
+  "homepage": "https://github.com/ThomasC3/RefactorU#readme"
+}
