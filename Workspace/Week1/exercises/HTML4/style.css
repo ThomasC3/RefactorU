@@ -1,0 +1,290 @@
+body {
+    width: 960px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #7f8c8d;
+}
+
+.left {
+    float: left;
+}
+
+header h1 {
+    color: white;
+    font-weight: 900;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    padding-left: 10px;
+    padding-bottom: 15px;
+}
+
+#wrapper {
+    width: 640px;
+    margin: 0 auto;
+    background-color: #ecf0f1;
+}
+
+header {
+    width: 100%;
+    background-color: #2ecc71;
+    height: 200px;
+    position: relative;
+}
+
+nav {
+    height: 50px;
+    width: 100%;
+    background-color: #34495e;
+}
+
+nav ul {
+    line-height: 50px;
+    margin: 0;
+    display: inline-block;
+    float: right;
+    padding-right: 12px;
+}
+
+nav ul li {
+    padding-left: 25px;
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+#content {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #ecf0f1;
+    padding-top: 35px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.con-para {
+    padding: 0 40px 0 25px;
+}
+.olink {
+    text-decoration: none;
+    color: #d46b34;
+}
+
+.stitle {
+    border-bottom: 1px solid lightgrey;
+}
+
+h3 {
+    margin: 0;
+    padding-left: 10px;
+}
+
+table {
+    border: 1px solid lightgrey;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+th, td {
+    border: 1px solid lightgrey;
+    padding: 0;
+    margin: 0;
+}
+
+th {
+    background-color: #bdc3c7;
+    padding: 0;
+    padding-left: 10px;
+    margin: 0;
+    text-align: left;
+    height: 30px;
+    line-height: 30px;
+}
+
+td {
+    padding: 10px 15px;
+}
+
+.end {
+    width: 15%;
+}
+
+.mid {
+    width: 70%;
+}
+
+.blue {
+    background-color: #3498db;
+}
+
+.button {
+    color: white;
+    text-decoration: none;
+    font-size: small;
+    height: 20px;
+    line-height: 20px;
+    padding: 5px 15px;
+}
+
+section {
+    margin-top: 45px;
+}
+
+.code {
+    background-color: #bdc3c7;
+    height: 120px;
+    width: 100%;
+    max-width: 610px;
+    padding: 0;
+    padding-top: 20px;
+    padding-left: 45px;
+    font-family: "Courier New", Courier, monospace;
+    box-sizing: border-box;
+}
+
+.code p {
+    padding: 0;
+}
+
+ol {
+    padding-left: 15px;
+}
+
+ol li {
+    padding-bottom: 15px;
+}
+
+.author {
+    color: lightgrey;
+    padding: 0;
+}
+
+.form {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    padding: 50px 30px;
+    text-align: right;
+}
+
+input {
+    margin-bottom: 10px;
+    margin-left: 15px;
+    width: 400px;
+    height: 30px;
+}
+
+.com-tag {
+    color: grey;
+    background-color: #ecf0f1;
+    position: relative;
+    top: 11px;
+    margin-left: 25px;
+    width: 100px;
+    padding: 0 15px;
+}
+
+.com-tag-bot {
+    color: grey;
+    background-color: #ecf0f1;
+    position: relative;
+    bottom: 11px;
+    margin-left: 25px;
+    width: 100px;
+    padding: 0 15px;
+}
+
+.lrg {
+    width: 610px;
+    background-color: #c0392b;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#com-con {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+}
+
+#commenting {
+    display: block;
+    padding-left: 0;
+}
+
+#commenting .cmmnt, ul .cmmnt, ul ul .cmmnt {
+    display: block;
+    position: relative;
+    padding-left: 65px;
+    padding-top: 15px;
+}
+
+#commenting .cmmnt .avatar  {
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+
+
+#commenting .cmmnt .cmmnt-content {
+    padding: 0px 3px;
+    padding-bottom: 12px;
+}
+
+.cmnt-hdr {
+    font-size: 1em;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.pubdate {
+    color: #cccccc;
+    font-size: small;
+    font-style: italic;
+}
+
+.userlink {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.replies {
+    margin-bottom: 7px;
+    border-left: 1px solid #cccccc;
+}
+
+#sidebox {
+    width: 200px;
+    background-color: #ecf0f1;
+    border-bottom: 2px solid black;
+    margin-top: 0;
+    margin-left: 645px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: fixed;
+    top: 260px;
+}
+
+#sidebox ul {
+    list-style: none;
+    padding: 5px 20px;
+    color: #7f8c8d;
+    font-size: 16px;
+    margin: 0;
+}
+
+#sidebox h3 {
+    margin-top: 15px;
+    font-size: 16px;
+}
